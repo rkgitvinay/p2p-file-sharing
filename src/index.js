@@ -45,8 +45,8 @@ const App = async () => {
     peerDiscovery: [
       bootstrap({
         list: [
-          '/ip4/35.200.242.137/tcp/9001/ws/p2p/12D3KooWRA2MJBJcNQSkVqGPi57MdSf1n9v6erLWYVa5aGnnqNBs',
-          '/ip4/35.200.242.137/tcp/9002/p2p/12D3KooWRA2MJBJcNQSkVqGPi57MdSf1n9v6erLWYVa5aGnnqNBs'
+          '/ip4/35.200.242.137/tcp/9001/ws/p2p/12D3KooWCb5yRLGTrey8Jn25SZP3VpX37fAx4p6UVo5Xc5qPHAXm',
+          '/ip4/35.200.242.137/tcp/9002/p2p/12D3KooWCb5yRLGTrey8Jn25SZP3VpX37fAx4p6UVo5Xc5qPHAXm'
         ],
       }),
       pubsubPeerDiscovery({
@@ -86,7 +86,7 @@ const App = async () => {
 
   setInterval(() => {
     update(DOM.nodePeerCount(), libp2p.getConnections().length)
-    update(DOM.nodePeerTypes(), getPeerTypes(libp2p))
+    // update(DOM.nodePeerTypes(), getPeerTypes(libp2p))
     update(DOM.nodeAddressCount(), libp2p.getMultiaddrs().length)
     update(DOM.nodeAddresses(), getAddresses(libp2p))
     update(DOM.nodePeerDetails(), getPeerDetails(libp2p))

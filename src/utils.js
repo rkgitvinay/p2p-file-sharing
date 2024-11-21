@@ -6,7 +6,8 @@ export function getAddresses(libp2p) {
   return libp2p
     .getMultiaddrs()
     .map((ma) => {
-      return `<li class="text-sm break-all"><button class="bg-teal-500 hover:bg-teal-700 text-white mx-2" onclick="navigator.clipboard.writeText('${ma.toString()}')">Copy</button>${ma.toString()}</li>`
+      // return `<li class="text-sm break-all"><button class="bg-teal-500 hover:bg-teal-700 text-white mx-2" onclick="navigator.clipboard.writeText('${ma.toString()}')">Copy</button>${ma.toString()}</li>`
+      return ``
     })
     .join('')
 }
