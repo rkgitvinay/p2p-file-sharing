@@ -50,7 +50,46 @@
         <ul class="list-disc list-inside ml-4" id="output-peer-details"></ul>
       </section>
 
-      <hr class="my-6 border-gray-300" />
+      
+
+      <section class="my-6">
+        <h2 class="font-bold text-xl text-blue-600 mb-2">File Sharing</h2>
+        
+        <div class="mb-4">
+          <p id="peer-status" class="text-sm text-gray-600 mb-2"></p>
+          
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="file-input">
+            Share a file
+          </label>
+          <input
+            type="file"
+            id="file-input"
+            class="block w-full text-sm text-gray-500
+              file:mr-4 file:py-2 file:px-4
+              file:rounded-full file:border-0
+              file:text-sm file:font-semibold
+              file:bg-blue-50 file:text-blue-700
+              hover:file:bg-blue-100"
+          />
+          <p id="upload-status" class="mt-2 text-sm text-gray-600"></p>
+        </div>
+      
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <h3 class="font-bold text-lg mb-2">Your Shared Files</h3>
+            <ul id="shared-files-list" class="space-y-2"></ul>
+          </div>
+      
+          <div>
+            <h3 class="font-bold text-lg mb-2">Available Files</h3>
+            <ul id="available-files-list" class="space-y-2"></ul>
+          </div>
+        </div>
+      </section>
+
+
+
+
     </main>
   </body>
 </html>
