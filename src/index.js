@@ -81,7 +81,10 @@ const App = async () => {
   update(DOM.nodePeerId(), libp2p.peerId.toString())
   update(DOM.nodeStatus(), 'Online')
 
-  libp2p.addEventListener('peer:connect', (event) => {})
+  libp2p.addEventListener('peer:connect', (event) => {
+    const peerId = event.detail.toString();
+    console.log('Connected to peer:', peerId)
+  })
   libp2p.addEventListener('peer:disconnect', (event) => {})
 
   setInterval(() => {
