@@ -45,12 +45,12 @@ const App = async () => {
     peerDiscovery: [
       bootstrap({
         list: [
-          '/ip4/35.200.242.137/tcp/9001/ws/p2p/12D3KooWPyFNFu2n9nN7crWrzFpXfhpULWgY42DNJ9szSu4Lo7gx',
-          '/ip4/35.200.242.137/tcp/9002/p2p/12D3KooWPyFNFu2n9nN7crWrzFpXfhpULWgY42DNJ9szSu4Lo7gx'
+          '/ip4/35.200.242.137/tcp/9001/ws/p2p/12D3KooWLzTm7EtKTQj3oqpEPSRF3ASfre2odjCC2u5foHN1z1QU',
+          '/ip4/35.200.242.137/tcp/9002/p2p/12D3KooWLzTm7EtKTQj3oqpEPSRF3ASfre2odjCC2u5foHN1z1QU'
         ],
       }),
       pubsubPeerDiscovery({
-        interval: 10_000,
+        interval: 1000,
         topics: [PUBSUB_PEER_DISCOVERY],
       }),
     ],
@@ -94,25 +94,6 @@ const App = async () => {
     update(DOM.nodeAddresses(), getAddresses(libp2p))
     update(DOM.nodePeerDetails(), getPeerDetails(libp2p))
   }, 1000)
-
-  DOM.loggingButtonEnable().onclick = (e) => {
-    enable('*,*:debug')
-  }
-  DOM.loggingButtonDisable().onclick = (e) => {
-    disable()
-  }
-
-  DOM.connectButton().onclick = async (e) => {
-    e.preventDefault()
-    let maddr = multiaddr(DOM.inputMultiaddr().value)
-
-    console.log(maddr)
-    try {
-      await libp2p.dial(maddr)
-    } catch (e) {
-      console.log(e)
-    }
-  }
 }
 
 App().catch((err) => {
