@@ -100,6 +100,7 @@ export class FileSharing {
       new TextEncoder().encode(JSON.stringify(announcement))
     )
     console.log('File announced:', announcement)
+    this.handleFileAnnouncement(announcement);
   }
 
   handleFileAnnouncement(announcement) {

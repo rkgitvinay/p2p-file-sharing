@@ -48,8 +48,8 @@ const App = async () => {
     peerDiscovery: [
       bootstrap({
         list: [
-          '/ip4/35.200.242.137/tcp/9001/ws/p2p/12D3KooWAP5gk6AgEesUiGLGqMzph9xwQY1CWwuKPmcLbe63dG8L',
-          '/ip4/35.200.242.137/tcp/9002/p2p/12D3KooWAP5gk6AgEesUiGLGqMzph9xwQY1CWwuKPmcLbe63dG8L'
+          '/ip4/35.200.242.137/tcp/9001/ws/p2p/12D3KooWCVPjKKKNoiRJzjAHGY2TBBSgS5J4eLJde5Eijop2qGxv',
+          '/ip4/35.200.242.137/tcp/9002/p2p/12D3KooWCVPjKKKNoiRJzjAHGY2TBBSgS5J4eLJde5Eijop2qGxv'
         ],
       }),
       pubsubPeerDiscovery({
@@ -137,7 +137,7 @@ const App = async () => {
 
   // Listen for file announcements
   libp2p.services.pubsub.addEventListener('message', async (message) => {
-    console.log('topic:', message.detail.topic);
+    // console.log('topic:', message.detail.topic);
     
     if (message.detail.topic !== FILE_ANNOUNCE_TOPIC) return
     
