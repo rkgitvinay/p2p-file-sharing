@@ -11,11 +11,11 @@ import { webRTC, webRTCDirect } from '@libp2p/webrtc'
 import { circuitRelayTransport, circuitRelayServer } from '@libp2p/circuit-relay-v2'
 import { enable, disable } from '@libp2p/logger'
 import { pubsubPeerDiscovery } from '@libp2p/pubsub-peer-discovery'
-import { PUBSUB_PEER_DISCOVERY } from './constants'
+// import { PUBSUB_PEER_DISCOVERY } from './constants'
 import { update, getPeerTypes, getAddresses, getPeerDetails } from './utils'
 import { bootstrap } from '@libp2p/bootstrap'
 import * as filters from '@libp2p/websockets/filters'
-
+const PUBSUB_PEER_DISCOVERY = 'browser-peer-discovery'
 import { FileSharing } from './fileSharing.js'
 const FILE_ANNOUNCE_TOPIC = 'file-announce-v1'
 
