@@ -48,8 +48,8 @@ const App = async () => {
     peerDiscovery: [
       bootstrap({
         list: [
-          '/ip4/35.200.242.137/tcp/9001/ws/p2p/12D3KooWCVPjKKKNoiRJzjAHGY2TBBSgS5J4eLJde5Eijop2qGxv',
-          '/ip4/35.200.242.137/tcp/9002/p2p/12D3KooWCVPjKKKNoiRJzjAHGY2TBBSgS5J4eLJde5Eijop2qGxv'
+          '/ip4/35.200.242.137/tcp/9001/ws/p2p/12D3KooWA3RS7LVhQtakV59DezTfWYZHKchsUBTUxZyB5zy4wSJb',
+          '/ip4/35.200.242.137/tcp/9002/p2p/12D3KooWA3RS7LVhQtakV59DezTfWYZHKchsUBTUxZyB5zy4wSJb'
         ],
       }),
       pubsubPeerDiscovery({
